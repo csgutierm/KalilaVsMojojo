@@ -24,10 +24,6 @@ public class Game {
 		// Instance of random class
 		Random rand = new Random();
 
-		// Generating random values from 0 - 14
-		// using nextInt()
-//	      int int_random = rand.nextInt(upperbound); 
-
 		inicializarMatriz(matriz);
 		
 		int fila = 0;
@@ -35,10 +31,9 @@ public class Game {
 		boolean exitosoPosicionamiento = false;
 		
 		List<Carro> carro = new ArrayList<Carro>();
-		
+
 		// 3 Kromis
 		for (int i = 0; i < 3; i++) {
-
 			
 			do {
 				
@@ -70,7 +65,6 @@ public class Game {
 		
 		// 5 Caguanos
 		for (int i = 0; i < 5; i++) {
-
 			
 			do {
 				
@@ -79,9 +73,6 @@ public class Game {
 				exitosoPosicionamiento = validar("caguano", fila, columna);
 				
 			} while (!exitosoPosicionamiento);
-			
-
-			
 			
 			//(int fila, int columna, int cantidadOcupantes, LocalDateTime fechaIngreso, int alcanceTiro, String colorConfeti)
 			Caguano caguano = new Caguano();
@@ -104,7 +95,6 @@ public class Game {
 		
 		// 10 Trupallas
 		for (int i = 0; i < 10; i++) {
-
 			
 			do {
 				
@@ -114,8 +104,7 @@ public class Game {
 				exitosoPosicionamiento = validar("trupalla", fila, columna);
 				
 			} while (!exitosoPosicionamiento);
-			
-			
+						
 			//(int fila, int columna, int cantidadOcupantes, LocalDateTime fechaIngreso, int nivelArmadura, String conductor)
 			Trupalla trupalla = new Trupalla();
 			trupalla.setNivelArmadura(1 + rand.nextInt(4));
@@ -134,19 +123,13 @@ public class Game {
 //			tablero.crearCarro(kromi,fila,columna);			
 //			System.out.println("Trupalla en posición: " + fila + "," + columna);
 		}
-
 		for (int i = 0; i < upperbound; i++) {
 			for (int j = 0; j < upperbound; j++) {
-
 				System.out.print(matriz[i][j]);
-
 			}
 			System.out.println("");
-
 		}
-
 	}
-
 	private static void inicializarMatriz(String[][] matriz2) {
 		for (int i = 0; i < upperbound; i++) {
 			for (int j = 0; j < upperbound; j++) {

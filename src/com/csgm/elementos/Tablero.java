@@ -11,8 +11,9 @@ import com.csgm.vehiculos.Carro;
 public class Tablero {
 	
 	//limite de 18 para carros
-	List<Carro> carro;
-	List<Huevo> huevo;
+	private List<Carro> carro;
+	private List<Huevo> huevo;
+	private String[][] matriz;
 	
 	public Tablero(List<Carro> carro, List<Huevo> huevo) {
 		super();
@@ -43,6 +44,15 @@ public class Tablero {
 		this.huevo = huevo;
 	}
 
+	
+
+	public String[][] getMatriz() {
+		return matriz;
+	}
+
+	public void setMatriz(String[][] matriz) {
+		this.matriz = matriz;
+	}
 
 	public boolean crearCarro (Carro carro, int fila, int columna ) {
 		//check si es posible crear el carro en ese lugar
