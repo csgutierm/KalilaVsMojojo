@@ -4,12 +4,10 @@ import java.time.LocalDateTime;
 
 public class Caguano extends Carro {
 	
-
 	private int alcanceTiro;
 	private String colorConfeti;
 	
 	
-
 	public Caguano() {
 		super();
 	}
